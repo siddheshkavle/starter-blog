@@ -1,34 +1,18 @@
 @media (max-width: 991px) {
-	.appContainer {
-		padding: 2em 5em;
-	}
-
 	.blogContainer {
 		display: block;
 	}
 
-	.blogContainer__section {
-		border-right: none;
-		padding-right: 0;
-	}
-
-	.blogContainer__section__date {
-		border-bottom: 1px solid lightgrey;
-		margin-bottom: 0;
-		padding-bottom: 3em;
-	}
-
 	.blogContainer__aside {
-		padding-top: 3em;
-		margin: auto;
-		width: 90%;
+		padding: 2rem;
+		margin: 2rem auto;
+		width: 50%;
 	}
 }
 
 /* Microsoft Lumia 550 */
 @media (max-width: 640px) {
 	.blogContainer__aside {
-		padding: 3em 0;
 		width: 100%;
 	}
 }

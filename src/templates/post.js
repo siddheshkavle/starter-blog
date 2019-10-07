@@ -4,8 +4,9 @@ import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 // Components
-import Layout from '../../components/layout/layout';
-import SEO from '../../components/seo/seo';
+import Layout from '../components/layout';
+import { Nav } from '../components/nav';
+import SEO from '../components/seo';
 
 const options = {
 	renderMark: {
@@ -36,18 +37,19 @@ class PostTemplate extends React.Component {
 		return (
 			<Layout title={title} subtitle={subtitle}>
 				<SEO title={title} description={description} slug={slug} />
-				<section className="posts">
+				<Nav />
+				<section className="post container">
 					<p className="date">{date}</p>
 					{content && documentToReactComponents(content.json, options)}
-					<ul>
-						<li className="post-navigation">
+					<ul className="post__list list">
+						<li className="post__listItem">
 							{previous && (
 								<Link to={previous.slug} rel="prev">
 									← {previous.title}
 								</Link>
 							)}
 						</li>
-						<li className="post-navigation">
+						<li className="post__listItem">
 							{next && (
 								<Link to={next.slug} rel="next">
 									{next.title} →

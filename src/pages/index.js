@@ -3,9 +3,9 @@ import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 // Components
-import Layout from '../../components/layout/layout';
-import { Nav } from '../../components/nav/nav';
-import SEO from '../../components/seo/seo';
+import Layout from '../components/layout';
+import { Nav } from '../components/nav';
+import SEO from '../components/seo';
 
 class BlogIndex extends React.Component {
 	render() {
@@ -25,7 +25,7 @@ class BlogIndex extends React.Component {
 							(post) =>
 								post.node.content && (
 									<div className="blogContainer__section__postSummary" key={post.node.title}>
-										<p className="blogContainer__section__date">{post.node.date}</p>
+										<p className="date">{post.node.date}</p>
 										<h2 className="blogContainer__section__header">{post.node.title}</h2>
 										<p className="blogContainer__section__paragraph">{post.node.description}</p>
 
@@ -42,10 +42,10 @@ class BlogIndex extends React.Component {
 								)
 						)}
 					</section>
-					<aside className="blogContainer__aside">
-						<Img fluid={profilePic} alt={`Author ${author}`} />
+					<aside className="blogContainer__aside container">
+						<Img className="blogContainer__aside__img" fluid={profilePic} alt={`Author ${author}`} />
 						<h3 className="blogContainer__aside__header">{author}</h3>
-						<p>{bio}</p>
+						<p className="blogContainer__aside__paragraph">{bio}</p>
 					</aside>
 				</div>
 			</Layout>
