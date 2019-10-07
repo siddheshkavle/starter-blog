@@ -4,8 +4,8 @@ import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 // Components
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Layout from '../../components/layout/layout';
+import SEO from '../../components/seo/seo';
 
 const options = {
 	renderMark: {

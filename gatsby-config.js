@@ -7,8 +7,8 @@ const contentfulConfig = {
 
 module.exports = {
 	siteMetadata: {
-		title: `Starter Blog`,
-		subtitle: `Built with React and Gatsby`,
+		title: `Coding Love`,
+		subtitle: `Everybody needs a little code love in their life.`,
 		author: `Rachelle Rathbone`,
 		description: `A blog that shows you the awesome power of gatsby.`,
 		bio: `Teacher turned engineer, Rachelle is a software engineer and mother of one, with a killer Australian accent.`,

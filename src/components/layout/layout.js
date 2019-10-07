@@ -4,7 +4,7 @@ import { Link, useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 function Layout({ title, subtitle, children }) {
-	const { home } = useStaticQuery(
+	const { home, site } = useStaticQuery(
 		graphql`
 			query {
 				home: file(absolutePath: { regex: "/home.png/" }) {
@@ -14,6 +14,11 @@ function Layout({ title, subtitle, children }) {
 						}
 					}
 				}
+				site {
+					siteMetadata {
+						title
+					}
+				}
 			}
 		`
 	);
@@ -21,20 +26,20 @@ function Layout({ title, subtitle, children }) {
 	const homeIcon = home.childImageSharp.fluid;
 
 	return (
-		<div className="app-container">
-			<div className="homeLinkContainer">
-				{title !== 'Starter Blog' && (
+		<div className="appContainer">
+			<div className="appContainer__homeLinkContainer">
+				{title !== site.siteMetadata.title && (
 					<Link to="/">
 						<Img fluid={homeIcon} alt="Link to go to home page" />
 					</Link>
 				)}
 			</div>
-			<header>
-				<h1>{title}</h1>
-				<p>{subtitle}</p>
+			<header className="appContainer__header container">
+				<h1 className="appContainer__header__title">{title}</h1>
+				<p className="appContainer__header__subtitle">{subtitle}</p>
 			</header>
-			<main>{children}</main>
-			<footer>© {new Date().getFullYear()}, Rachelle Rathbone</footer>
+			<main className="appContainer__main">{children}</main>
+			<footer className="appContainer__footer">© {new Date().getFullYear()}, Rachelle Rathbone</footer>
 		</div>
 	);
 }
