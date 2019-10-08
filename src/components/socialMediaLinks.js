@@ -38,17 +38,23 @@ export const SocialMediaLinks = () => {
 
 	return (
 		<div className="socialMedia">
-			<a href="https://twitter.com/coding_love" className="socialMedia__link link" target="__blank">
+			<a
+				href="https://twitter.com/coding_love"
+				className="socialMedia__link link"
+				target="__blank"
+				rel="noopener"
+			>
 				<Img className="socialMedian__link__img" fixed={twitter} alt="Twitter" />
 			</a>
 			<a
 				href="https://www.linkedin.com/in/rachelle-rathbone/"
 				className="socialMedia__link link"
 				target="__blank"
+				rel="noopener"
 			>
 				<Img className="socialMedian__link__img" fixed={linkedIn} alt="LinkedIn" />
 			</a>
-			<a href="https://github.com/rrathbone" className="socialMedia__link link" target="__blank">
+			<a href="https://github.com/rachellerathbone" className="socialMedia__link link" target="__blank" rel="noopener">
 				<Img className="socialMedian__link__img" fixed={github} alt="Github" />
 			</a>
 		</div>
