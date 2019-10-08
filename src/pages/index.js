@@ -4,8 +4,8 @@ import Img from 'gatsby-image';
 
 // Components
 import Layout from '../components/layout';
-import { Nav } from '../components/nav';
 import SEO from '../components/seo';
+import { SocialMediaLinks } from '../components/socialMediaLinks';
 
 class BlogIndex extends React.Component {
 	render() {
@@ -17,8 +17,7 @@ class BlogIndex extends React.Component {
 		return (
 			<Layout title={title} subtitle={subtitle}>
 				<base href="/post/" />
-				<SEO title="All posts" />
-				<Nav />
+				<SEO title="Coding Love" />
 				<div className="blogContainer">
 					<section className="blogContainer__section container">
 						{posts.map(
@@ -46,6 +45,8 @@ class BlogIndex extends React.Component {
 						<Img className="blogContainer__aside__img" fluid={profilePic} alt={`Author ${author}`} />
 						<h3 className="blogContainer__aside__header">{author}</h3>
 						<p className="blogContainer__aside__paragraph">{bio}</p>
+
+						<SocialMediaLinks />
 					</aside>
 				</div>
 			</Layout>

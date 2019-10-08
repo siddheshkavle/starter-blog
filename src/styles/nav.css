@@ -1,20 +1,26 @@
 .navigation__list {
 	align-content: space-between;
-	color: #fff;
+
 	display: flex;
 	justify-content: center;
 	margin: 0;
 }
 
-.navigation__listItem {
+.navigation__link {
+	color: #fff;
 	font-weight: bold;
 	margin: 0;
 	padding: .5rem;
+	text-decoration: none;
 }
 
-.navigation__listItem:active,
-.navigation__listItem:focus,
-.navigation__listItem:hover {
+.navigation__link:active,
+.navigation__link:focus,
+.navigation__link:hover {
 	color: #ffa500;
 	text-decoration: underline;
+}
+
+.navigation__link__listItem {
+	margin-bottom: 0;
 }
